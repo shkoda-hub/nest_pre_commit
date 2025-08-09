@@ -1,0 +1,13 @@
+name: ci.yml
+on:
+  pull_request:
+    branches: [development]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Print message
+        run: echo "Hello world!"

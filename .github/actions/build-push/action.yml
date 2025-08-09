@@ -1,0 +1,9 @@
+name: 'Build and push'
+description: 'Builds Docker image and pushes to GHCR'
+runs:
+  using: composite
+  steps:
+    - name: Install Dependencies
+      run: npm install
+    - name: Build
+      run: npm run build
