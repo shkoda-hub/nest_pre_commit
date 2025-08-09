@@ -3,7 +3,16 @@ description: 'Builds Docker image and pushes to GHCR'
 runs:
   using: composite
   steps:
+    - name: Set up node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 24
+        cache: npm
+
     - name: Install Dependencies
-      run: npm install
+      run: npm ci
+      shell: bash
+
     - name: Build
       run: npm run build
+      shell: bash
