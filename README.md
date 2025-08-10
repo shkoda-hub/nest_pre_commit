@@ -28,3 +28,6 @@ npm run schema:check
 7. You will see script like that:
    Shema is not up to date:
    ALTER TABLE "user" ADD "email" character varying(255) NOT NULL;
+
+
+   test
